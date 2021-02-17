@@ -5,7 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 import com.daniilxt.todo_app.R
+import com.google.android.material.floatingactionbutton.FloatingActionButton
 
 class ListFragment : Fragment() {
     override fun onCreateView(
@@ -13,6 +15,14 @@ class ListFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_list, container, false)
+        val view = inflater.inflate(R.layout.fragment_list, container, false)
+        view.findViewById<FloatingActionButton>(R.id.list_frg__fab).setOnClickListener{
+        findNavController().navigate(R.id.action_listFragment_to_addFragment)
+        }
+        return view
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 }
