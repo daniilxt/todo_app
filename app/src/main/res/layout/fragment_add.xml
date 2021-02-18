@@ -9,38 +9,50 @@
 
 
     <EditText
-        android:id="@+id/add_frg__title_et"
+        android:id="@+id/update_frg__title_et"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
+        android:layout_height="@dimen/spacing_double_big_60"
         android:background="@android:color/transparent"
+        android:ems="10"
+        android:hint="@string/add_frg__title_et"
         android:inputType="textPersonName"
-        android:text="@string/add_frg__title_et"
+        android:paddingStart="@dimen/spacing_large_24"
+        android:paddingTop="@dimen/spacing_massive__16"
+        android:paddingEnd="@dimen/spacing_large_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Spinner
-        android:id="@+id/add_frg__spinner"
+        android:id="@+id/update_frg__spinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
+        android:layout_height="@dimen/spacing_double_big_60"
+        android:layout_marginTop="@dimen/spacing_double_tiny_8"
+        android:entries="@array/priorities"
+        android:paddingStart="@dimen/spacing_large_24"
+        android:paddingEnd="@dimen/spacing_large_24"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_frg__title_et" />
+        app:layout_constraintTop_toBottomOf="@+id/update_frg__title_et" />
 
     <EditText
-        android:id="@+id/add_frg__note"
+        android:id="@+id/update_frg__note_et"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:layout_marginTop="@dimen/spacing_double_tiny_8"
+        android:background="@android:color/transparent"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text="@string/add_frg__note"
+        android:gravity="top|start"
+        android:hint="@string/add_frg__note"
+        android:inputType="textMultiLine"
+        android:paddingStart="@dimen/spacing_large_24"
+        android:paddingTop="@dimen/spacing_massive__16"
+        android:paddingEnd="@dimen/spacing_large_24"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/add_frg__spinner" />
+        app:layout_constraintTop_toBottomOf="@+id/update_frg__spinner" />
 </androidx.constraintlayout.widget.ConstraintLayout>
